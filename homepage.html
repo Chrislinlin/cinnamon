@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Chuchu Cinnamon</title>
+
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="reset.css">
+        <style>
+            *{
+                padding: 0;
+                margin: 0;
+                list-style: none;
+            }
+            .under_wrap{
+                padding: 100px 0;
+                background: rgb(104, 124, 65)
+            }
+
+            .under_wrap .container{
+                width: 1200px;
+                display: flex;
+                margin: auto;
+            }
+            .un_item{
+                display: flex;
+                flex-direction: column;
+                margin: 10px;
+                width: 0;
+                flex-grow: 1;
+            }
+            .un_item h4{
+                border-bottom: 2px dotted #fff;
+                padding-bottom: .3em;
+                margin-bottom: .5em;
+                font-size: 24px;
+                color: #fff;
+
+            }
+            .un_item a{
+                text-decoration: none;
+                color: #fff;
+            }
+            .sub_item {
+                display: flex;
+                flex-direction: column;
+            }
+            .sub_item form{
+                display: flex;
+            }
+            .sub_item input[type="text"],.sub_item input[type="submit"]{
+                border: none;
+                padding: 5px 10px;
+            }
+            .sub_item input[type="text"]{
+                width: 0;
+                flex-grow: 1;
+            }
+            .sub_item input[type="submit"]{
+                color:white;
+                background-color: #aaa;
+            }
+            .copyright{
+                background-color: #555;
+                text-align: center;
+                padding: 5px;
+                color: #fff;
+            }
+        </style>
+    </head>
+    <body>
+        <header class="main-header">
+            <div class="header">
+                <div class ="logo">
+                    <a href="homepage.html"><img src="https://picsum.photos/80/50/?random=2" alt="logo"></a>
+                </div>
+            
+                <nav class = "nav">
+                    <a href="story.html">Stroy</a>
+                    <a href="product.html">Product</a>
+                
+                
+                    <a href="shoppingCart.html">Shopping Cart</a>
+                    <a href="contact.html">Contact</a>
+                </nav>
+                <form class="header-research">
+                    <input type="search" name="" id="">
+                    <button>搜尋</button>
+                </form>
+            </div>
+        </header>
+       
+        <div class="banner">
+            <img src="https://picsum.photos/1440/300/?random=2">
+        </div>
+        <ul class="path">
+            <li><a href="homepage.html">homepage</a></li>
+            <li><a href="product.html">Product</a></li>
+            <li><a href="contact.html">contact</a></li>
+            
+        </ul>
+
+            <div class="product">
+                <div class="another">
+                    <div class="about pic">
+                        <img src="https://picsum.photos/1200/500/?random=3">
+                    </div>
+                    <div class="about text">
+                        <h1>About Cinanmon</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum excepturi nobis dolore aspernatur iusto amet quis tempore, neque fugit delectus asperiores, molestias dicta! Nostrum, tenetur sapiente optio quae officia dicta.</p>
+                    </div>
+                       
+                </div>
+                
+            </div>
+        
+            <div class="wrap">
+                <h2>熱銷商品</h2>
+            </div>
+            <div class="wrap">
+              <div class="item">
+                <img src="https://picsum.photos/300/200/?random=3">海鹽焦糖
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt numquam voluptatibus illum est ipsum velit quis at esse quaerat repellat.
+                </p>
+            </div>
+            <div class="item">
+                <img src="https://picsum.photos/300/200/?random=4">黑糖胡桃
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt numquam voluptatibus illum est ipsum velit quis at esse quaerat repellat.
+                </p>
+            </div>
+            <div class="item">
+                <img src="https://picsum.photos/300/200/?random=5">原味
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt numquam voluptatibus illum est ipsum velit quis at esse quaerat repellat.
+                </p>
+            </div>  
+            
+            
+        </div>
+        <div class="under_wrap">
+            <div class="container">
+                <div class="un_item">
+                    <h4>Product</h4>
+                    <a href="#">訂購商品</a>
+                </div>
+                <div class="un_item">
+                    <h4>Shopingcart</h4>
+                    <a href="#">購物車</a>
+                </div>
+                <div class="un_item">
+                    <h4>Story</h4>
+                    <a href="#">關於我們</a>
+                </div>
+                <div class="un_item">
+                    <h4>Contact</h4>
+                    <a href="#">聯絡我們</a>
+                </div>
+                <div class="un_item sub_item">
+                    <h4>Subscribe</h4>
+                    <form>
+                        <input type="text" name="">
+                        <input type="submit" value="訂閱">
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            Copyright &copy;2020
+        </div>
+
+
+
+         
+
+
+    </body>
+        
+    
+</html>
+

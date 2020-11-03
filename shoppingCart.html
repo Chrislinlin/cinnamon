@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="reset.css">
+        <style>
+            body{
+                margin-top: 100px;
+            }
+            .item_header{
+                display: flex;
+                margin: 10px auto;
+                width: 1000px;
+                background-color: rgb(167, 164, 164);
+                padding: 10px;
+                
+            }
+            .item_header div{
+                width: 200px;
+            }
+            .items{
+                width: 960px;
+                display: flex;
+                background-color: gray;
+                padding: 20px;
+            }
+            .item_body{
+                align-items: center;
+            }
+            .item_detail{
+               width: 50%;
+
+                
+            }
+            .item_detail img{
+                float: left;
+            }
+            .item_detail .name{
+                margin-left: 100px;
+                margin-top:38px;
+            }
+            thead{
+                background-color: rgb(171, 182, 150);
+                
+                
+                
+            }
+
+            table{
+               
+                margin-right: auto;
+                margin-left: auto;
+                width: 1024px;
+                
+            }
+            tr{
+              height: 50px;
+              text-justify: auto;
+              
+              
+              
+            }
+        </style>
+        <title>shoppingCart</title>
+
+
+        
+    </head>
+    <body>
+        <header class="main-header">
+            <div class="header">
+                <div class ="logo">
+                    <a href="homepage.html"><img src="https://picsum.photos/80/50/?random=2" alt="logo"></a>
+                </div>
+               
+                <nav class = nav>
+                    <a href="story.html">Stroy</a>
+                    <a href="product.html" class="a2">Product</a>
+                    <a href="shoppingCart.html">Shopping Cart</a>
+                    <a href="contact.html">Contact</a>
+                </nav>
+                <form class="header-research">
+                    <input type="search" name="" id="">
+                    <button>go</button>
+                </form>
+            </div>
+        </header>
+        
+
+
+        <table class="table"  >
+            <h1>再買就剁手手</h1>
+            <thead class ="thead">
+                <tr>
+                    <td>商品</td>
+                    <td>商品名稱</td>
+                    <td>單價</td>
+                    <td>數量</td>
+                    <td>總計</td>
+                    <td>操作</td>
+                </tr>
+            </thead>
+            <tbody id="goods">
+                <tr>
+                    <td><img src="https://picsum.photos/100/90/?random=4" alt="aa"></td>
+                    <td>海鹽焦糖</td>
+                    <td>80</td>
+                    <td><input type="button" id="number-jia" class = "number-jia" value="ADD" onclick="change(this,+1)"></button>
+                        <input type ="text" id="number-input" value= "1" class = "number-input" onclick="change(this)"></button>
+                        <input type="button" id="number-jian" class = "number-jia" value="MINUS" onclick="change(this,-1)"></button>
+                    </td>
+                    <td id="total"></td>
+                    <td>
+                        <input type="button" id="del" class="del" value="X" onclick="del(this)">
+                    </td>                   
+                </tr>
+                <tr>
+                    <td><img src="https://picsum.photos/100/90/?random=5" alt="aa"></td>
+                    <td>經典原味</td>
+                    <td>60</td>
+                    <td><input type="button" id="number-jia" class = "number-jia" value="ADD" onclick="change(this,+1)"></button>
+                        <input type ="text" id="number-input" value= "1" class = "number-input" onclick="change(this)"></button>
+                        <input type="button" id="number-jian" class = "number-jia" value="MINUS" onclick="change(this,-1)"></button>
+                    </td>
+                    <td id="total"></td>
+                    <td>
+                        <input type="button" id="del" class="del" value="X" onclick="del(this)">
+                    </td>                   
+                </tr>
+            </tbody>
+
+        </table>
+
+
+        <script>
+           
+            function change (btn,n){
+                var inputs = btn.parentNode.getElementsByTagName("input");
+                var amount = parseInt(inputs[1].value);
+                inputs[1].value=amount+n;
+                amount=inputs[1].value;
+                var tr= btn.parentNode.parentNode;
+                var tds= tr.getElementsByTagName("td")
+
+                var price= parseInt (tds[2].innerHTML);
+                var sumtotal =price *amount;
+                tds[4].innerHTML =sumtotal;
+                total();
+
+            }
+
+            function total(){
+                var tbody= document.getElementById("goods");
+                var trs = tbody.getElementsByTagName("tr");
+                var sum = 0;
+                for(var i =0;i<trs.length;i++){
+                    var tds=trs[i].getElementsByTagName("td")
+                    var sumtotal= tds[4].innerHTML;
+                    sum=sum+parseInt(sumtotal);
+                }
+                var total = document.getElementById("total");
+                total.innerHTML=sum;
+            }
+
+            function del(i){
+                var tr= i.parentNode.parentNode;
+                tr.parentNode.removeChild(tr);
+                
+            }
+           
+        </script>
+
+        
+        
+    </body>
+</html>

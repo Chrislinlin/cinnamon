@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Contact</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="reset.css">
+        <style>
+            .contact{
+                padding-top: 100px;
+                display: flex;
+                padding: 130px 130px;
+                
+            }
+            .reply{
+                background-color: gray;
+                
+            }
+            
+            .form{
+                padding: 10px;
+            }
+            .form input, textarea:focus{
+                outline: none;
+            }
+            .red_color{
+                font-size: 50%;
+                color: red;
+            }
+            .contact .button{
+                width: 100%;
+                height: 100%;
+                padding: 10px;
+                color: red;
+
+            }
+            .contact .button input{
+                padding: 10px;
+                display: flex;
+                align-items: flex-start;
+                
+            }
+        </style>
+        <script>
+            function submitHandler(){
+
+            }
+        </script>
+
+    </head>
+    <body>
+        <header class="main-header">
+            <div class="header">
+                <div class ="logo">
+                    <a href="homepage.html"><img src="https://picsum.photos/80/50/?random=2" alt="logo"></a>
+                </div>
+               
+                <nav class = nav>
+                    <a href="story.html">Stroy</a>
+                    <a href="product.html" class="a2">Product</a>
+                    <a href="shoppingCart.html">Shopping Cart</a>
+                    <a href="contact.html">Contact</a>
+                </nav>
+                <form class="header-research">
+                    <input type="search" name="" id="">
+                    <button>go</button>
+                </form>
+            </div>
+        </header>
+        <div class="reply">
+            <div class="contact">
+                <div class="img">
+                    <img src="https://picsum.photos/440/300/?random=2">
+                </div>
+                
+                <div class="form_group">
+                    <div class="form">
+                    
+                        <!--姓名-->
+                        <span class="red_color">*</span>
+                        <label for ="name" class=name>姓名：</label>
+                        <input id="nameText" type="text" placeholder="Name" name="name">
+                </div>
+                <div class="form">
+                        <!--電郵-->
+                        <span class="red_color">*</span>
+                        <label for ="email" class=email>信箱：</label>
+                        <input id="emailText" type="text" placeholder="E-mail" name="email">
+                </div>
+                <div class="form">
+                        <!--主只-->
+                        <span class="red_color">*</span>
+                        <label for ="subject" class=subject>主旨：</label>
+                        <input id="subjectText"type="text" placeholder="Subject" name="subject">
+                </div>
+                
+                <div class="form">
+                    <div>
+                        <textarea id="sayText"name="saying" rows="6" cols="30">Say to "ChuChu"</textarea> 
+                    </div>
+                </div>  
+                        <div class="button">
+                            <input type="button" value="送出" onclick="submitHandler()">
+                            <a id="mailTo"></a>
+                        </div>
+                </div>
+                
+                        
+                    
+                </div>
+            </div>
+        </div>
+        
+        
+        
+
+    </body>
+</html>
